@@ -1,0 +1,28 @@
+.m-button {
+  cursor: pointer;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #01b075;
+  color: #fff;
+  padding: 0 24px;
+  text-align: center;
+  border: none;
+  min-width: 100px;
+}
+
+.m-button:hover {
+  background-color: #2fbe8e;
+}
+
+.m-button:active {
+  background-color: #01b075;
+}
+
+.m-button-icon {
+  background-size: 16px 16px;
+  background-image: url(/assets/icon/add.png);
+  background-repeat: no-repeat;
+  background-position: 16px center;
+  padding-left: 40px;
+  padding-right: 16px;
+}
