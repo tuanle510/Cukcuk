@@ -3,11 +3,14 @@
 @import url(../css/components/input.css);
 @import url(../css/components/dialog.css);
 @import url(../css/components/combobox.css);
+@import url(../css/components/paging.css);
 
 body {
   font-family: MISA Font;
   font-size: 13px;
   margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
 }
 
 @font-face {

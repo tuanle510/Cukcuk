@@ -41,7 +41,7 @@
           <div class="m-error">Mật khấu không đươc trùng với tài khoản</div>
           <input
           type="text"
-          class="m-input m-input-error"
+          class="m-input-error m-input "
           placeholder="Tim kiem theo ten, theo ho so"
           />
         </div>
@@ -53,19 +53,50 @@
       <div class="m-row">
         <table class="m-table">
           <thead>
-            <th>#</th>
-            <th>Mã Nhân Viên</th>
-            <th>Họ và tên</th>
-            <th>Vị trí </th>
+            <tr>
+              <th style="width: 100px;">#</th>
+              <th style="width: 150px;">Mã Nhân Viên</th>
+              <th>Họ và tên</th>
+              <th style="width: 200px;">Vị trí </th>
+            </tr>
           </thead>
-
           <tbody>
-            <td>1</td>
-            <td>1234</td>
-            <td>Lê Thiện Tuấn</td>
-            <td>Nhân viên</td>
+            <tr>
+              <td>1</td>
+              <td>1234</td>
+              <td>Lê Thiện Tuấn</td>
+              <td>Nhân viên</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1234</td>
+              <td>Lê Thiện Tuấn</td>
+              <td>Nhân viên</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1234</td>
+              <td>Lê Thiện Tuấn</td>
+              <td>Nhân viên</td>
+            </tr>
           </tbody>
         </table>
+        <div class="m-paging">
+          <div class="m-paging-left">Hiển thị 01-20/123 lao động </div>
+          <div class="m-paging-center">
+            <button class="m-page-button m-firstpage"></button>
+            <button class="m-page-button m-prepage"></button>
+            <div class="m-paging-group">
+              <button class="m-number m-number-active">1</button>
+              <button class="m-number">2</button>
+              <button class="m-number">3</button>
+              <button class="m-number">4</button>
+            </div>
+            <button class="m-page-button m-nextpage"></button>
+            <button class="m-page-button m-lastpage"></button>
+          </div>
+          <div class="m-paging-right">20 lao động/trang</div>
+        </div>
     </div>
     
     <div class="m-row">

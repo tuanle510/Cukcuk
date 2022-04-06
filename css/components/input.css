@@ -24,7 +24,7 @@
 }
 
 .m-input:focus {
-  border: 2px solid #019160;
+  border: 2px solid #019160 !important;
 }
 
 .m-error-box .m-input-error {
