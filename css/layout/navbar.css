@@ -1,0 +1,34 @@
+.m-navbar {
+  width: 225px;
+  height: calc(100vh - 48px);
+  border-right: 1px solid #bbb;
+  box-sizing: border-box;
+}
+
+.m-navbar .m-nemu-item {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+}
+
+.m-navbar .m-nemu-item:hover {
+  cursor: pointer;
+  background-color: #e5e5e5;
+}
+
+.m-navbar .m-nemu-item.m-menu-selected {
+  background-color: #019160;
+  color: #fff;
+}
+
+.m-navbar .m-nemu-item .m-menu-icon {
+  height: 20px;
+  width: 20px;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.m-navbar .m-nemu-item .m-menu-text {
+  margin-left: 10px;
+}

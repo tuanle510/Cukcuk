@@ -26,3 +26,31 @@
   padding-left: 40px;
   padding-right: 16px;
 }
+
+.m-button-error {
+  background-color: #f65454;
+}
+
+.m-button-error:hover {
+  background-color: #fd7575;
+}
+
+.m-button-normal {
+  background-color: transparent;
+  color: #000;
+}
+
+.m-button-normal:hover {
+  background-color: #bbb;
+}
+
+.btn-refresh {
+  width: 40px !important;
+  height: 40px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  background-color: #fff;
+  background-image: url(/assets/icon/refresh.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}

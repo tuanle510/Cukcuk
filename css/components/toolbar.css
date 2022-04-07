@@ -1,0 +1,12 @@
+.m-page-toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.m-page-toolbar .m-toolbar-left {
+  display: flex;
+}
+
+.m-page-toolbar .m-toolbar-left .m-combobox {
+  margin-left: 10px;
+}

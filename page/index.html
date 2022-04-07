@@ -6,15 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/assets/font/fontawesome-5.15.1/css/all.css" />
+
     <title>Document</title>
   </head>
   <body style="padding: 20px">
+    <!-- button -->
     <div class="m-row">
       <label for="">1.BUTTON</label>
       <div class="m-row">
         <button class="m-button">Dong y</button>
       </div>
     </div>
+
+    <div class="m-row">
+      <label for="">1.BUTTON ERROR</label>
+      <div class="m-row">
+        <button class="m-button m-button-error">Huy</button>
+      </div>
+    </div>
+
+    <div class="m-row">
+      <label for="">1.BUTTON NORMAL </label>
+      <div class="m-row">
+        <button class="m-button m-button-normal">Tiep tuc</button>
+      </div>
+    </div>
+    <!-- end button -->
+
+    <!-- Check box -->
+    <div class="m-row">
+      <label for="">2.Check-box</label>
+      <div class="m-row">
+        <div class="m-checkbox">
+          <i id="checkbox" class="fas fa-check" style="display: none"></i>
+        </div>
+      </div>
+      <div class="m-row">
+        <div class="m-checkbox m-checkbox-selected">
+          <i class="fas fa-check"></i>
+        </div>
+      </div>
+    </div>
+    <!-- end check box -->
 
     <div class="m-row">
       <label for="">2.BUTTON WITH ICON</label>
@@ -24,40 +58,41 @@
     </div>
 
     <div class="m-row">
-      <label for="">2.INPUT</label>
+      <label for="">2.INPUT WITH ICON</label>
       <div class="m-row">
         <input
           type="text"
-          class="m-input m-input-error"
+          class="m-input"
           placeholder="Tim kiem theo ten, theo ho so"
         />
       </div>
     </div>
-    
+
     <div class="m-row">
       <label for="">2.INPUT ERROR</label>
       <div class="m-row">
         <div class="m-error-box" style="width: 260px">
           <div class="m-error">Mật khấu không đươc trùng với tài khoản</div>
           <input
-          type="text"
-          class="m-input-error m-input "
-          placeholder="Tim kiem theo ten, theo ho so"
+            type="text"
+            class="m-input-error m-input"
+            placeholder="Tim kiem theo ten, theo ho so"
           />
         </div>
       </div>
     </div>
-    
+
+    <!-- table -->
     <div class="m-row">
       <label for="">2.TABLE</label>
       <div class="m-row">
         <table class="m-table">
           <thead>
             <tr>
-              <th style="width: 100px;">#</th>
-              <th style="width: 150px;">Mã Nhân Viên</th>
+              <th style="width: 100px">#</th>
+              <th style="width: 150px">Mã Nhân Viên</th>
               <th>Họ và tên</th>
-              <th style="width: 200px;">Vị trí </th>
+              <th style="width: 200px">Vị trí</th>
             </tr>
           </thead>
           <tbody>
@@ -81,8 +116,9 @@
             </tr>
           </tbody>
         </table>
+
         <div class="m-paging">
-          <div class="m-paging-left">Hiển thị 01-20/123 lao động </div>
+          <div class="m-paging-left">Hiển thị 01-20/123 lao động</div>
           <div class="m-paging-center">
             <button class="m-page-button m-firstpage"></button>
             <button class="m-page-button m-prepage"></button>
@@ -97,8 +133,11 @@
           </div>
           <div class="m-paging-right">20 lao động/trang</div>
         </div>
+      </div>
     </div>
-    
+    <!-- end table -->
+
+    <!-- combo box -->
     <div class="m-row">
       <label for="">3.COMBOBOX</label>
       <div class="m-row">
@@ -113,7 +152,7 @@
         <div class="m-combobox" style="width: 300px">
           <input type="text" />
           <button></button>
-          <div class="m-combobox-data">
+          <div class="m-combobox-data" style="display: none">
             <div class="m-combobox-item">Trang thai 1</div>
             <div class="m-combobox-item">Trang thai 2</div>
             <div class="m-combobox-item">Trang thai 3</div>
@@ -124,5 +163,99 @@
         </div>
       </div>
     </div>
+    <!-- end combobox -->
+
+    <!-- dialog -->
+    <div class="m-row">
+      <label for="">2.DIALOG</label>
+      <div class="m-row">
+        <button class="m-button" id="btnShowDialog">dialog</button>
+        <div class="m-dialog">
+          <div class="m-popup">
+            <div class="m-close" id="btnCloseDialog"></div>
+
+            <div class="m-popup-main">
+              <div class="m-popup-header">Đóng Form thông tin chung</div>
+              <div class="m-popup-content">
+                Hiện bạn chưa thiết lập USB Token. Vui lòng thiết lập và kết nối
+                với USB Token để ký nộp các hồ sơ
+              </div>
+            </div>
+
+            <div class="m-popup-button">
+              <button class="m-button">Đồng ý</button>
+              <button class="m-button m-button-error">Đóng</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end dialog -->
+
+    <div class="m-row">
+      <label for="">Toast messenger</label>
+      <div class="m-row">
+        <button id="btnShowToast" class="m-button">Hiển thị toastbox</button>
+      </div>
+      <d  iv class="toast-box" id="tsBox">
+        <div class="toast-msg-item toast-error">
+          <div class="toast-icon">
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <div class="toast-text">Them moi thanh cong</div>
+          <div class="toast-close"><i class="fas fa-times"></i></div>
+        </div>
+        <div class="toast-msg-item toast-warnning">
+          <div class="toast-icon">
+            <i class="fas fa-exclamation-circle"></i>
+          </div>
+          <div class="toast-text">Them moi thanh cong</div>
+          <div class="toast-close"><i class="fas fa-times"></i></div>
+        </div>
+        <div class="toast-msg-item toast-success">
+          <div class="toast-icon"><i class="fas fa-check-circle"></i></div>
+          <div class="toast-text">Them moi thanh cong</div>
+          <div class="toast-close"><i class="fas fa-times"></i></div>
+        </div>
+        <div class="toast-msg-item toast-info">
+          <div class="toast-icon"><i class="fas fa-info-circle"></i></div>
+          <div class="toast-text">Them moi thanh cong</div>
+          <div class="toast-close"><i class="fas fa-times"></i></div>
+        </div>
+      </div>
+    </div>
+
+
   </body>
+
+  <script>
+    const checkbox = document.querySelector(".m-checkbox");
+    const icon = document.querySelector(".fa-check");
+    checkbox.addEventListener("click", () => {
+      checkbox.classList.toggle("m-checkbox-selected");
+      if (icon.style.display === "none") {
+        icon.style.display = "block";
+      } else {
+        icon.style.display = "none";
+      }
+    });
+
+    document
+      .getElementById("btnShowDialog")
+      .addEventListener("click", function () {
+        document.querySelector(".m-dialog").style.display = "block";
+      });
+
+    document.getElementById("btnCloseDialog").addEventListener("click", () => {
+      document.querySelector(".m-dialog").style.display = "none";
+    });
+
+    document.getElementById("btnShowToast").addEventListener("click", () => {
+      console.log('hello')
+      document.getElementById("tsBox").style.display = "block";
+      setTimeout(() => {
+        document.getElementById("tsBox").style.display = "none";
+      }, 3000);
+    });
+  </script>
 </html>

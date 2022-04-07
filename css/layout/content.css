@@ -1,0 +1,30 @@
+.m-content {
+  position: absolute;
+  top: 48px;
+  left: 225px;
+  right: 0;
+  bottom: 0;
+  padding: 24px 24px 0 24px;
+  background-color: yellow;
+  box-sizing: border-box;
+}
+
+.m-content .m-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  width: 100%;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.m-content .m-page-header .m-page-tittle {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.m-content .m-page-toolbar {
+  height: 40px;
+  width: 100%;
+}

@@ -1,19 +1,18 @@
 .m-paging {
   width: 100%;
   height: 56px;
-  /* background-color: #bbb; */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.m-paging-center {
+.m-paging .m-paging-center {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.m-page-button {
+.m-paging .m-page-button {
   height: 40px;
   width: 40px;
   background-repeat: no-repeat;
@@ -23,24 +22,24 @@
   background-color: transparent;
 }
 
-.m-firstpage {
+.m-paging .m-firstpage {
   background-image: url(/assets/icon/btn-firstpage.svg);
 }
-.m-prepage {
+.m-paging .m-prepage {
   background-image: url(/assets/icon/btn-prev-page.svg);
 }
-.m-nextpage {
+.m-paging .m-nextpage {
   background-image: url(/assets/icon/btn-next-page.svg);
 }
-.m-lastpage {
+.m-paging .m-lastpage {
   background-image: url(/assets/icon/btn-lastpage.svg);
 }
 
-.m-page-button:not(:first-child) {
+.m-paging .m-page-button:not(:first-child) {
   margin-left: 10px;
 }
 
-.m-number {
+.m-paging .m-number {
   width: 40px;
   height: 40px;
   border-radius: 1000px;
@@ -48,8 +47,7 @@
   margin-left: 10px;
   background-color: transparent;
 }
-
-.m-number-active {
+.m-paging .m-number.m-number-active {
   background-color: #019160;
   color: #fff;
 }

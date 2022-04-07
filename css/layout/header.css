@@ -1,0 +1,40 @@
+.m-header {
+  height: 48px;
+  width: 100%;
+  display: flex;
+}
+
+.m-header .header-left {
+  width: 225px;
+  height: 100%;
+  border-right: 1px solid #bbb;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+}
+
+.m-header .header-right {
+  width: calc(100% - 225px);
+  height: 100%;
+  background-color: red;
+}
+
+.m-header .header-left .sidebar {
+  width: 24px;
+  height: 24px;
+  background-image: url(/assets/img/toggle.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.m-header .header-left .logo {
+  width: 100%;
+  height: 24px;
+  background-image: url(/assets/img/cukcuk-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
