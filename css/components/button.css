@@ -54,3 +54,11 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.btn-refresh:hover {
+  background-color: #e5e5e5;
+}
+
+.btn-refresh:active {
+  background-color: #bbb;
+}

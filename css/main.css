@@ -10,8 +10,6 @@
 @import url(/css/components/main.css);
 @import url(/css/components/toast.css);
 @import url(/css/components/toolbar.css);
-
-/*  */
 @import url(/css/layout/header.css);
 @import url(/css/layout/navbar.css);
 @import url(/css/layout/content.css);
@@ -60,8 +58,11 @@ ul li {
 }
 
 .text-align-left {
+  text-align: left;
 }
 .text-align-right {
+  text-align: right;
 }
 .text-align-center {
+  text-align: center;
 }

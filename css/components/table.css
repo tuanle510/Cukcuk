@@ -10,8 +10,19 @@
   padding: 0;
 }
 
+.m-table tr td,
+.m-table tr th {
+  padding: 0 5px;
+}
+
 .m-table tbody tr:hover {
   background-color: #2fbe8e;
+}
+
+.m-table thead tr th {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
 }
 
 .m-grip {
@@ -20,7 +31,6 @@
   background-color: #fff;
   box-sizing: border-box;
   position: relative;
-  /* background-color: aquamarine; */
 }
 
 .m-grip .m-contain-table {
