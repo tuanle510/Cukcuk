@@ -16,22 +16,22 @@
 
 .m-grip {
   width: 100%;
-  height: calc(100% - 80px);
+  height: calc(100% - 90px);
   background-color: #fff;
   box-sizing: border-box;
   position: relative;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
 }
 
 .m-grip .m-contain-table {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 48px);
   overflow-y: auto;
 }
 
 .m-grip .m-paging {
   position: absolute;
-  background-color: red;
+  background-color: #fff;
   width: 100%;
   bottom: 0;
 }

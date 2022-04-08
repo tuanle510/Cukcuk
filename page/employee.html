@@ -19,7 +19,25 @@
         <div class="sidebar"></div>
         <div class="logo"></div>
       </div>
-      <div class="header-right"></div>
+      <div class="header-right">
+        <div class="branch">
+          <div class="branch-logo"></div>
+          <div class="header-text">Chi nhánh MISA miền Bắc</div>
+          <div class="arrow"></div>
+        </div>
+        <div class="user">
+          <div class="noti">
+            <i class="far fa-bell"></i>
+          </div>
+          <div class="user-info">
+            <div class="user-ava"></div>
+            <div class="user-name">Le Thien Tuan</div>
+          </div>
+          <div class="option">
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- navbar -->
@@ -54,6 +72,72 @@
           <button class="m-button m-button-icon" id="btnAdd">
             Thêm nhân viên
           </button>
+
+          <!-- dialog -->
+          <div class="m-dialog" id="addStaff">
+            <div class="m-popup">
+              <div class="m-close" id="btnCloseDialog"></div>
+
+              <div class="m-popup-main">
+                <div class="m-popup-header">Thông tin nhân viên</div>
+                <div class="m-popup-content">
+                  <div class="content-left">
+                    <div class="user-ava"></div>
+                    <div class="user-text">
+                      (Vui lòng chọn ảnh có định <br />
+                      dạng <br />
+                      <span>.jpg, .jpeg, .gif, .png)</span>
+                    </div>
+                  </div>
+
+                  <div class="content-right">
+                    <div class="content-header">A.Thông tin chung:</div>
+                    <div class="content-fields">
+                      <input
+                        type="text"
+                        class="m-input"
+                        placeholder="Tim kiem theo ten, theo ho so"
+                      />
+                      <input
+                        type="text"
+                        class="m-input"
+                        placeholder="Tim kiem theo ten, theo ho so"
+                      />
+                      <input
+                        type="text"
+                        class="m-input"
+                        placeholder="Tim kiem theo ten, theo ho so"
+                      />
+                      <input
+                        type="text"
+                        class="m-input"
+                        placeholder="Tim kiem theo ten, theo ho so"
+                      />
+                      <input
+                        type="text"
+                        class="m-input"
+                        placeholder="Tim kiem theo ten, theo ho so"
+                      />
+                      <input
+                        type="text"
+                        class="m-input"
+                        placeholder="Tim kiem theo ten, theo ho so"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="popup-left"></div>
+                </div>
+              </div>
+
+              <div class="m-popup-button">
+                <button class="m-button">Đồng ý</button>
+                <button class="m-button m-button-error">Đóng</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- end-dialog -->
         </div>
       </div>
 
@@ -95,6 +179,7 @@
           <button class="btn-refresh"></button>
         </div>
       </div>
+
       <div class="m-grip">
         <div class="m-contain-table">
           <table class="m-table">
@@ -220,4 +305,13 @@
       </div>
     </div>
   </body>
+
+  <!-- nhúng các thư viện  -->
+  <script src="/js/jquery/jquery-3.6.0.min.js"></script>
+
+  <!-- nhúng js chung -->
+  <!-- <script src="/js/common.js"></script> -->
+
+  <!-- nhúng js sử dụng chung cho các trang -->
+  <script src="/js/employee.js"></script>
 </html>

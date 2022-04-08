@@ -17,7 +17,7 @@
 .m-header .header-right {
   width: calc(100% - 225px);
   height: 100%;
-  background-color: red;
+  /* background-color: red; */
 }
 
 .m-header .header-left .sidebar {
@@ -37,4 +37,73 @@
   background-image: url(/assets/img/cukcuk-logo.png);
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.m-header .header-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-bottom: 1px solid #bbb;
+}
+
+.m-header .header-right .branch {
+  display: flex;
+  align-items: center;
+}
+
+.m-header .header-right .branch .branch-logo {
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-left: 8px;
+  background-color: aqua;
+  /* background-image: url(/assets/img/default-avatar.jpg); */
+  background-size: contain;
+}
+
+.m-header .header-right .branch .header-text {
+  margin-left: 10px;
+}
+
+.m-header .header-right .branch .arrow {
+  margin-left: 10px;
+  height: 16px;
+  width: 16px;
+  background-image: url(/assets/icon/btn-next-page.svg);
+  background-size: contain;
+  transform: rotate(90deg);
+}
+
+.m-header .header-right .user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.m-header .header-right .user .noti {
+  height: 20x;
+  width: 20px;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.m-header .header-right .user .user-info {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.m-header .header-right .user .user-info .user-ava {
+  width: 24px;
+  height: 24px;
+  border-radius: 10000px;
+  background-image: url(/assets/icon/avatar-default.png);
+  background-size: contain;
+}
+
+.m-header .header-right .user .option {
+  font-size: 16px;
 }
