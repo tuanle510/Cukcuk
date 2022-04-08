@@ -1,0 +1,19 @@
+.m-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+.m-checkbox-selected {
+  background-color: #019160;
+  color: #fff;
+  position: relative;
+}
+
+.m-checkbox-selected i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

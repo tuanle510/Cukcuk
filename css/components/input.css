@@ -1,0 +1,57 @@
+.m-error-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.m-input{
+  height: 40px;
+  width: 260px;
+  border: 1px solid #bbb;
+  outline: none;
+  border-radius: 4px;
+  padding-left: 16px;
+}
+
+.m-input-icon {
+  padding-left: 40px;
+  background-image: url(/assets/icon/search.png);
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: 16px center;
+}
+
+.m-input::placeholder {
+  font-family: MISA Font;
+  color: #bbb;
+}
+
+.m-input:focus {
+  border: 2px solid #019160 !important;
+}
+
+.m-error-box .m-input-error {
+  border: 1px solid #ff4747;
+}
+
+.m-error-box .m-error {
+  position: relative;
+  width: 70%;
+  text-align: center;
+  background-color: #ff4747;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 4px;
+  color: #fff;
+}
+
+.m-error-box .m-error::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #ff4747;
+  bottom: -8px;
+  left: calc(50% - 8px);
+  transform: rotate(45deg);
+}

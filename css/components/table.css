@@ -1,0 +1,37 @@
+.m-table {
+  width: 100%;
+  background-color: #fff;
+  border-collapse: collapse;
+}
+
+.m-table tr {
+  height: 46px;
+  border-bottom: 1px solid #bbb;
+  padding: 0;
+}
+
+.m-table tbody tr:hover {
+  background-color: #2fbe8e;
+}
+
+.m-grip {
+  width: 100%;
+  height: calc(100% - 90px);
+  background-color: #fff;
+  box-sizing: border-box;
+  position: relative;
+  /* background-color: aquamarine; */
+}
+
+.m-grip .m-contain-table {
+  width: 100%;
+  height: calc(100% - 48px);
+  overflow-y: auto;
+}
+
+.m-grip .m-paging {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  bottom: 0;
+}

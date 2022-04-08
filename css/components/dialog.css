@@ -1,0 +1,120 @@
+.m-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.341);
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.m-dialog .m-popup {
+  position: absolute;
+  width: auto;
+  height: auto;
+  background-color: #fff;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+  box-shadow: 5px 6px 17px 0px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.m-dialog .m-popup .m-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background-image: url(/assets/icon/x.svg);
+  background-position: center;
+  border-radius: 4px;
+}
+
+.m-dialog .m-popup .m-close:hover {
+  background-color: #bbb;
+}
+
+.m-dialog .m-popup .m-popup-main {
+  padding: 24px;
+}
+
+.m-dialog .m-popup .m-popup-main .m-popup-header {
+  margin-bottom: 24px;
+  padding-right: 24px;
+  font-weight: bold;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.m-dialog .m-popup .m-popup-main .m-popup-content {
+  display: flex;
+}
+
+.m-dialog .m-popup .m-popup-main .m-popup-content .content-right {
+  width: calc(100% - 200px);
+  padding-left: 16px;
+}
+
+.m-dialog
+  .m-popup
+  .m-popup-main
+  .m-popup-content
+  .content-right
+  .content-header {
+  font-size: 15px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.m-dialog
+  .m-popup
+  .m-popup-main
+  .m-popup-content
+  .content-right
+  .content-header::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: #019160;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.m-dialog .m-popup .m-popup-main .m-popup-content .content-left {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: beige;
+  text-align: center;
+}
+
+.m-dialog .m-popup .m-popup-main .m-popup-content .content-left .user-ava {
+  width: 200px;
+  height: 200px;
+  background-image: url(/assets/img/default-avatar.jpg);
+  background-size: contain;
+  border-radius: 50%;
+  border: 1px solid #bbb;
+}
+
+.m-dialog .m-popup .m-popup-button {
+  padding: 10px 24px 10px 0;
+  display: flex;
+  justify-content: flex-end;
+  height: 60px;
+  background-color: #e5e5e5;
+  box-sizing: border-box;
+  border-radius: 0 0 4px 4px;
+}
+
+.m-dialog .m-popup .m-popup-button .m-button:last-child {
+  margin-left: 16px;
+}

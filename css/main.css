@@ -1,13 +1,30 @@
-@import url(../css/components/button.css);
-@import url(../css/components/table.css);
-@import url(../css/components/input.css);
-@import url(../css/components/dialog.css);
-@import url(../css/components/combobox.css);
+@import url(/css/components/button.css);
+@import url(/css/components/table.css);
+@import url(/css/components/input.css);
+@import url(/css/components/dialog.css);
+@import url(/css/components/combobox.css);
+@import url(/css/components/paging.css);
+@import url(/css/components/check-box.css);
+@import url(/css/components/header.css);
+@import url(/css/components/navbar.css);
+@import url(/css/components/main.css);
+@import url(/css/components/toast.css);
+@import url(/css/components/toolbar.css);
+
+/*  */
+@import url(/css/layout/header.css);
+@import url(/css/layout/navbar.css);
+@import url(/css/layout/content.css);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: MISA Font;
   font-size: 13px;
-  margin: 0;
 }
 
 @font-face {
@@ -28,4 +45,23 @@ body {
 .m-row {
   width: 100%;
   margin: 10px 0;
+}
+
+.d-flex {
+  display: flex;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+.text-align-left {
+}
+.text-align-right {
+}
+.text-align-center {
 }

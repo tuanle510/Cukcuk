@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh sách nhân viên</title>
+    <!-- nhúng các thư viên css -->
+    <link rel="stylesheet" href="/assets/font/fontawesome-5.15.1/css/all.css" />
+    <!-- nhúng tệp css định nghĩa chung -->
+    <link rel="stylesheet" href="/css/main.css" />
+    <!-- nhúng tệp css định nghĩa riêng-->
+    <link rel="stylesheet" href="/css/page/employee.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <div class="m-header">
+      <div class="header-left">
+        <div class="sidebar"></div>
+        <div class="logo"></div>
+      </div>
+      <div class="header-right">
+        <div class="branch">
+          <div class="branch-logo"></div>
+          <div class="header-text">Chi nhánh MISA miền Bắc</div>
+          <div class="arrow"></div>
+        </div>
+        <div class="user">
+          <div class="noti">
+            <i class="far fa-bell"></i>
+          </div>
+          <div class="user-info">
+            <div class="user-ava"></div>
+            <div class="user-name">Le Thien Tuan</div>
+          </div>
+          <div class="option">
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- navbar -->
+    <div class="m-navbar">
+      <div class="m-nemu-item">
+        <div class="m-menu-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <div class="m-menu-text">Danh sách nhân viên</div>
+      </div>
+      <div class="m-nemu-item m-menu-selected">
+        <div class="m-menu-icon">
+          <i class="far fa-id-badge"></i>
+        </div>
+        <div class="m-menu-text">Danh sách khách hàng</div>
+      </div>
+      <div class="m-nemu-item">
+        <div class="m-menu-icon"><i class="fas fa-chart-pie"></i></div>
+        <div class="m-menu-text">Báo cáo</div>
+      </div>
+      <div class="m-nemu-item">
+        <div class="m-menu-icon"><i class="fas fa-cog"></i></div>
+        <div class="m-menu-text">Cài đặt</div>
+      </div>
+    </div>
+
+    <!-- content -->
+    <div class="m-content">
+      <div class="m-page-header">
+        <div class="m-page-tittle">Danh sách nhân viên</div>
+        <div class="m-page-button">
+          <button class="m-button m-button-icon" id="btnAdd">
+            Thêm nhân viên
+          </button>
+
+          <!-- dialog -->
+          <div class="m-dialog" id="addStaff">
+            <div class="m-popup">
+              <div class="m-close" id="btnCloseDialog"></div>
+
+              <div class="m-popup-main">
+                <div class="m-popup-header">Thông tin nhân viên</div>
+                <div class="m-popup-content">
+                  <div class="content-left">
+                    <div class="user-ava"></div>
+                    <div class="user-text">
+                      (Vui lòng chọn ảnh có định <br />
+                      dạng <br />
+                      <span>.jpg, .jpeg, .gif, .png)</span>
+                    </div>
+                  </div>
+
+                  <div class="content-right">
+                    <div class="content-header">A.Thông tin chung:</div>
+                    <div class="content-fields">
+                      <input
+                        type="text"
+                        class="m-input"
+                        placeholder="Tim kiem theo ten, theo ho so"
+                      />
+                      <input
+                        type="text"
+                        class="m-input"
+                        placeholder="Tim kiem theo ten, theo ho so"
+                      />
+                      <input
+                        type="text"
+                        class="m-input"
+                        placeholder="Tim kiem theo ten, theo ho so"
+                      />
+                      <input
+                        type="text"
+                        class="m-input"
+                        placeholder="Tim kiem theo ten, theo ho so"
+                      />
+                      <input
+                        type="text"
+                        class="m-input"
+                        placeholder="Tim kiem theo ten, theo ho so"
+                      />
+                      <input
+                        type="text"
+                        class="m-input"
+                        placeholder="Tim kiem theo ten, theo ho so"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="popup-left"></div>
+                </div>
+              </div>
+
+              <div class="m-popup-button">
+                <button class="m-button">Đồng ý</button>
+                <button class="m-button m-button-error">Đóng</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- end-dialog -->
+        </div>
+      </div>
+
+      <div class="m-page-toolbar">
+        <div class="m-toolbar-left">
+          <input
+            type="text"
+            class="m-input m-input-error"
+            placeholder="Tìm kiếm theo Mã, Tên hoặc Số điện thoại"
+          />
+
+          <div class="m-combobox" style="width: 300px">
+            <input type="text" placeholder="Tất cả phòng ban" />
+            <button></button>
+            <div class="m-combobox-data" style="display: none">
+              <div class="m-combobox-item">Trang thai 1</div>
+              <div class="m-combobox-item">Trang thai 2</div>
+              <div class="m-combobox-item">Trang thai 3</div>
+              <div class="m-combobox-item m-combobox-itemselected">
+                Trang thai 4
+              </div>
+            </div>
+          </div>
+
+          <div class="m-combobox" style="width: 300px">
+            <input type="text" placeholder="Tất cả vị trí" />
+            <button></button>
+            <div class="m-combobox-data" style="display: none">
+              <div class="m-combobox-item">Trang thai 1</div>
+              <div class="m-combobox-item">Trang thai 2</div>
+              <div class="m-combobox-item">Trang thai 3</div>
+              <div class="m-combobox-item m-combobox-itemselected">
+                Trang thai 4
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="m-toolbar-right">
+          <button class="btn-refresh"></button>
+        </div>
+      </div>
+
+      <div class="m-grip">
+        <div class="m-contain-table">
+          <table class="m-table">
+            <thead>
+              <tr>
+                <th style="width: 100px">#</th>
+                <th style="width: 150px">Mã Nhân Viên</th>
+                <th>Họ và tên</th>
+                <th style="width: 200px">Vị trí</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>1234</td>
+                <td>Lê Thiện Tuấn</td>
+                <td>Nhân viên</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1234</td>
+                <td>Lê Thiện Tuấn</td>
+                <td>Nhân viên</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1234</td>
+                <td>Lê Thiện Tuấn</td>
+                <td>Nhân viên</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1234</td>
+                <td>Lê Thiện Tuấn</td>
+                <td>Nhân viên</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1234</td>
+                <td>Lê Thiện Tuấn</td>
+                <td>Nhân viên</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1234</td>
+                <td>Lê Thiện Tuấn</td>
+                <td>Nhân viên</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1234</td>
+                <td>Lê Thiện Tuấn</td>
+                <td>Nhân viên</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1234</td>
+                <td>Lê Thiện Tuấn</td>
+                <td>Nhân viên</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1234</td>
+                <td>Lê Thiện Tuấn</td>
+                <td>Nhân viên</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1234</td>
+                <td>Lê Thiện Tuấn</td>
+                <td>Nhân viên</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1234</td>
+                <td>Lê Thiện Tuấn</td>
+                <td>Nhân viên</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1234</td>
+                <td>Lê Thiện Tuấn</td>
+                <td>Nhân viên</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1234</td>
+                <td>Lê Thiện Tuấn</td>
+                <td>Nhân viên</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1234</td>
+                <td>Lê Thiện Tuấn</td>
+                <td>Nhân viên</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1234</td>
+                <td>Lê Thiện Tuấn</td>
+                <td>Nhân viên</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="m-paging">
+          <div class="m-paging-left">Hiển thị 01-20/123 lao động</div>
+          <div class="m-paging-center">
+            <button class="m-page-button m-firstpage"></button>
+            <button class="m-page-button m-prepage"></button>
+            <div class="m-paging-group">
+              <button class="m-number m-number-active">1</button>
+              <button class="m-number">2</button>
+              <button class="m-number">3</button>
+              <button class="m-number">4</button>
+            </div>
+            <button class="m-page-button m-nextpage"></button>
+            <button class="m-page-button m-lastpage"></button>
+          </div>
+          <div class="m-paging-right">20 lao động/trang</div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <!-- nhúng các thư viện  -->
+  <script src="/js/jquery/jquery-3.6.0.min.js"></script>
+
+  <!-- nhúng js chung -->
+  <!-- <script src="/js/common.js"></script> -->
+
+  <!-- nhúng js sử dụng chung cho các trang -->
+  <script src="/js/employee.js"></script>
+</html>
