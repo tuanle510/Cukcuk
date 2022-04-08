@@ -11,7 +11,7 @@
 
 .m-dialog .m-popup {
   position: absolute;
-  width: 70%;
+  width: 60%;
   height: 90vh;
   background-color: #fff;
   margin: 0;
@@ -43,10 +43,11 @@
 
 .m-dialog .m-popup .m-popup-main {
   padding: 24px;
+  height: 100%;
 }
 
 .m-dialog .m-popup .m-popup-main .m-popup-header {
-  margin-bottom: 24px;
+  height: 48px;
   font-weight: bold;
   font-size: 24px;
   text-transform: uppercase;
@@ -54,18 +55,19 @@
 
 .m-dialog .m-popup .m-popup-main .m-popup-content {
   display: flex;
+  height: calc(100% - 48px);
 }
 
 /* content right */
 .m-popup-main .m-popup-content .content-right {
-  width: calc(100% - 25%);
+  width: calc(100% - 15%);
   padding-left: 16px;
   box-sizing: border-box;
 }
 
 .group-fields {
-  height: 100%;
-  overflow-y: scroll;
+  height: calc(100% - 60px);
+  overflow-y: auto;
 }
 
 .m-popup-main .m-popup-content .content-right .content-header {
@@ -116,7 +118,7 @@
 
 /* content left */
 .m-dialog .m-popup .m-popup-main .m-popup-content .content-left {
-  width: 25%;
+  width: 15%;
   display: flex;
   flex-direction: column;
   align-items: center;
