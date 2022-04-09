@@ -31,8 +31,8 @@
   border: 1px solid #019160 !important;
 }
 
-.m-error-box .m-input-error {
-  border: 1px solid #ff4747;
+.m-input-error {
+  border: 1px solid #ff4747 !important;
 }
 
 .m-error-box .m-error {
@@ -47,7 +47,7 @@
 }
 
 .m-error-box .m-error::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 16px;
   height: 16px;

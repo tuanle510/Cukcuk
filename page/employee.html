@@ -69,14 +69,14 @@
       <div class="m-page-header">
         <div class="m-page-tittle">Danh sách nhân viên</div>
         <div class="m-page-button">
-          <button class="m-button m-button-icon" id="btnAdd">
+          <button class="m-button m-button-icon" id="btnShowForm">
             Thêm nhân viên
           </button>
 
           <!-- dialog -->
           <div class="m-dialog" id="addStaff">
             <div class="m-popup">
-              <div class="m-close" id="btnCloseDialog"></div>
+              <div class="m-close btnCloseForm"></div>
 
               <div class="m-popup-main">
                 <div class="m-popup-header">Thông tin nhân viên</div>
@@ -90,159 +90,167 @@
                   </div>
 
                   <div class="content-right">
-                    <div class="group-fields">
-                      <div class="content-header">A.Thông tin chung:</div>
-                      <div class="content-fields">
-                        <div class="field">
-                          <label style="display: block" for="input"
-                            >Mã nhân viên (<span>*</span>)</label
-                          >
-                          <input
-                            type="text"
-                            class="m-input"
-                            placeholder="Tim kiem theo ten, theo ho so"
-                          />
-                        </div>
-                        <div class="field">
-                          <label style="display: block" for="input"
-                            >Họ và tên (<span>*</span>)</label
-                          >
-                          <input
-                            type="text"
-                            class="m-input"
-                            placeholder="Tim kiem theo ten, theo ho so"
-                          />
-                        </div>
-                        <div class="field">
-                          <label style="display: block" for="input"
-                            >Ngày sinh (<span>*</span>)</label
-                          >
-                          <input
-                            type="date"
-                            class="m-input"
-                            placeholder="Tim kiem theo ten, theo ho so"
-                          />
-                        </div>
-                        <div class="field">
-                          <label style="display: block" for="input"
-                            >Giới tính (<span>*</span>)</label
-                          >
-                          <input
-                            type="text"
-                            class="m-input"
-                            placeholder="Tim kiem theo ten, theo ho so"
-                          />
-                        </div>
-                        <div class="field">
-                          <label style="display: block" for="input"
-                            >Số CMTND/ Căn cước (<span>*</span>)</label
-                          >
-                          <input
-                            type="text"
-                            class="m-input"
-                            placeholder="Tim kiem theo ten, theo ho so"
-                          />
-                        </div>
-                        <div class="field">
-                          <label style="display: block" for="input"
-                            >Ngày cấp (<span>*</span>)</label
-                          >
-                          <input type="date" class="m-input" />
-                        </div>
-                        <div class="field" style="width: 50%">
-                          <label style="display: block" for="input"
-                            >Nơi cấp (<span>*</span>)</label
-                          >
-                          <input
-                            type="text"
-                            class="m-input"
-                            placeholder="Tim kiem theo ten, theo ho so"
-                          />
-                        </div>
-
-                        <div class="field">
-                          <label style="display: block" for="input"
-                            >Email (<span>*</span>)</label
-                          >
-                          <input
-                            type="text"
-                            class="m-input"
-                            placeholder="Tim kiem theo ten, theo ho so"
-                          />
-                        </div>
-                        <div class="field">
-                          <label style="display: block" for="input"
-                            >Số điện thoại (<span>*</span>)</label
-                          >
-                          <input
-                            type="text"
-                            class="m-input"
-                            placeholder="Tim kiem theo ten, theo ho so"
-                          />
-                        </div>
+                    <div class="content-header">A.Thông tin chung:</div>
+                    <div class="content-fields">
+                      <div class="field">
+                        <label style="display: block" for="input"
+                          >Mã nhân viên (<span>*</span>)</label
+                        >
+                        <input
+                          required
+                          type="text"
+                          class="m-input"
+                          placeholder="Tim kiem theo ten, theo ho so"
+                        />
                       </div>
-                      <div class="content-header">B.Thông tin công việc:</div>
-                      <div class="content-fields">
-                        <div class="field">
-                          <label style="display: block" for="input"
-                            >Vị trí (<span>*</span>)</label
-                          >
-                          <input
-                            type="text"
-                            class="m-input"
-                            placeholder="Tim kiem theo ten, theo ho so"
-                          />
-                        </div>
-                        <div class="field">
-                          <label style="display: block" for="input"
-                            >Phòng ban (<span>*</span>)</label
-                          >
-                          <input
-                            type="text"
-                            class="m-input"
-                            placeholder="Tim kiem theo ten, theo ho so"
-                          />
-                        </div>
-                        <div class="field">
-                          <label style="display: block" for="input"
-                            >mã số thuế cá nhân (<span>*</span>)</label
-                          >
-                          <input
-                            type="text"
-                            class="m-input"
-                            placeholder="Tim kiem theo ten, theo ho so"
-                          />
-                        </div>
-                        <div class="field">
-                          <label style="display: block" for="input"
-                            >Mức lương cơ bản (<span>*</span>)</label
-                          >
-                          <input
-                            type="text"
-                            class="m-input"
-                            placeholder="Tim kiem theo ten, theo ho so"
-                          />
-                        </div>
-                        <div class="field">
-                          <label style="display: block" for="input"
-                            >Ngày gia nhập công ty (<span>*</span>)</label
-                          >
-                          <input
-                            type="text"
-                            class="m-input"
-                            placeholder="Tim kiem theo ten, theo ho so"
-                          />
-                        </div>
-                        <div class="field">
-                          <label style="display: block" for="input"
-                            >Tình trạng công việc (<span>*</span>)</label
-                          >
-                          <input
-                            type="text"
-                            class="m-input"
-                            placeholder="Tim kiem theo ten, theo ho so"
-                          />
-                        </div>
+                      <div class="field">
+                        <label style="display: block" for="input"
+                          >Họ và tên (<span>*</span>)</label
+                        >
+                        <input
+                          required
+                          required
+                          type="text"
+                          class="m-input"
+                          placeholder="Tim kiem theo ten, theo ho so"
+                        />
+                      </div>
+                      <div class="field">
+                        <label style="display: block" for="input"
+                          >Ngày sinh (<span>*</span>)</label
+                        >
+                        <input
+                          required
+                          type="date"
+                          class="m-input"
+                          placeholder="Tim kiem theo ten, theo ho so"
+                        />
+                      </div>
+                      <div class="field">
+                        <label style="display: block" for="input"
+                          >Giới tính (<span>*</span>)</label
+                        >
+                        <input
+                          required
+                          type="text"
+                          class="m-input"
+                          placeholder="Tim kiem theo ten, theo ho so"
+                        />
+                      </div>
+                      <div class="field">
+                        <label style="display: block" for="input"
+                          >Số CMTND/ Căn cước (<span>*</span>)</label
+                        >
+                        <input
+                          required
+                          type="text"
+                          class="m-input"
+                          placeholder="Tim kiem theo ten, theo ho so"
+                        />
+                      </div>
+                      <div class="field">
+                        <label style="display: block" for="input"
+                          >Ngày cấp (<span>*</span>)</label
+                        >
+                        <input required type="date" class="m-input" />
+                      </div>
+                      <div class="field" style="width: 50%">
+                        <label style="display: block" for="input"
+                          >Nơi cấp (<span>*</span>)</label
+                        >
+                        <input
+                          required
+                          type="text"
+                          class="m-input"
+                          placeholder="Tim kiem theo ten, theo ho so"
+                        />
+                      </div>
+
+                      <div class="field">
+                        <label style="display: block" for="input"
+                          >Email (<span>*</span>)</label
+                        >
+                        <input
+                          required
+                          type="text"
+                          class="m-input"
+                          placeholder="Tim kiem theo ten, theo ho so"
+                        />
+                      </div>
+                      <div class="field">
+                        <label style="display: block" for="input"
+                          >Số điện thoại (<span>*</span>)</label
+                        >
+                        <input
+                          required
+                          type="text"
+                          class="m-input"
+                          placeholder="Tim kiem theo ten, theo ho so"
+                        />
+                      </div>
+                    </div>
+                    <div class="content-header">B.Thông tin công việc:</div>
+                    <div class="content-fields">
+                      <div class="field">
+                        <label style="display: block" for="input"
+                          >Vị trí (<span>*</span>)</label
+                        >
+                        <input
+                          required
+                          type="text"
+                          class="m-input"
+                          placeholder="Tim kiem theo ten, theo ho so"
+                        />
+                      </div>
+                      <div class="field">
+                        <label style="display: block" for="input"
+                          >Phòng ban (<span>*</span>)</label
+                        >
+                        <input
+                          type="text"
+                          class="m-input"
+                          placeholder="Tim kiem theo ten, theo ho so"
+                        />
+                      </div>
+                      <div class="field">
+                        <label style="display: block" for="input"
+                          >mã số thuế cá nhân (<span>*</span>)</label
+                        >
+                        <input
+                          type="text"
+                          class="m-input"
+                          placeholder="Tim kiem theo ten, theo ho so"
+                        />
+                      </div>
+                      <div class="field">
+                        <label style="display: block" for="input"
+                          >Mức lương cơ bản (<span>*</span>)</label
+                        >
+                        <input
+                          type="text"
+                          class="m-input"
+                          placeholder="Tim kiem theo ten, theo ho so"
+                        />
+                      </div>
+                      <div class="field">
+                        <label style="display: block" for="input"
+                          >Ngày gia nhập công ty (<span>*</span>)</label
+                        >
+                        <input
+                          type="text"
+                          class="m-input"
+                          placeholder="Tim kiem theo ten, theo ho so"
+                        />
+                      </div>
+                      <div class="field">
+                        <label style="display: block" for="input"
+                          >Tình trạng công việc (<span>*</span>)</label
+                        >
+                        <input
+                          type="text"
+                          class="m-input"
+                          placeholder="Tim kiem theo ten, theo ho so"
+                        />
                       </div>
                     </div>
                   </div>
@@ -250,8 +258,10 @@
               </div>
 
               <div class="m-popup-button">
-                <button class="m-button">Đồng ý</button>
-                <button class="m-button m-button-error">Đóng</button>
+                <button class="btnCloseForm m-button m-button-normal">
+                  Hủy
+                </button>
+                <button class="m-button">Lưu</button>
               </div>
             </div>
           </div>

@@ -56,9 +56,9 @@
 }
 
 .btn-refresh:hover {
-  background-color: #e5e5e5;
+  background-color: #bbb;
 }
 
 .btn-refresh:active {
-  background-color: #bbb;
+  background-color: #e5e5e5;
 }
