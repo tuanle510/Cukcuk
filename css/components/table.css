@@ -16,6 +16,7 @@
 }
 
 .m-table tbody tr:hover {
+  cursor: pointer;
   background-color: #2fbe8e;
 }
 
