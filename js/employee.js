@@ -5,6 +5,8 @@ $(document).ready(function () {
 class EmployeePage {
   TitlePage = 'Danh sách nhân viên';
   constructor() {
+    // Load da ta
+    this.loadData();
     // khởi tạo các sự kiện
     this.initEvent();
   }

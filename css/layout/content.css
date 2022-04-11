@@ -5,7 +5,7 @@
   right: 0;
   bottom: 0;
   padding: 24px 24px 0 24px;
-  /* background-color: yellow; */
+  /* background-color: #e5e5e5; */
   box-sizing: border-box;
 }
 
@@ -27,4 +27,5 @@
 .m-content .m-page-toolbar {
   height: 40px;
   width: 100%;
+  margin-bottom: 10px;
 }
