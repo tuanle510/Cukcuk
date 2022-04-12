@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/assets/font/fontawesome-5.15.1/css/all.css" />
-
+    
     <title>Document</title>
   </head>
   <body style="padding: 20px">
@@ -18,14 +18,14 @@
         <button class="m-button">Dong y</button>
       </div>
     </div>
-
+    
     <div class="m-row">
       <label for="">1.BUTTON ERROR</label>
       <div class="m-row">
         <button class="m-button m-button-error">Huy</button>
       </div>
     </div>
-
+    
     <div class="m-row">
       <label for="">1.BUTTON NORMAL </label>
       <div class="m-row">
@@ -33,7 +33,7 @@
       </div>
     </div>
     <!-- end button -->
-
+    
     <!-- Check box -->
     <div class="m-row">
       <label for="">2.Check-box</label>
@@ -56,25 +56,25 @@
         <button class="m-button m-button-icon">Them moi nhan vien</button>
       </div>
     </div>
-
+    
     <div class="m-row">
       <label for="">2.INPUT WITH ICON</label>
       <div class="m-row">
         <input
-          type="text"
-          class="m-input m-input-icon"
-          placeholder="Tim kiem theo ten, theo ho so"
+        type="text"
+        class="m-input m-input-icon"
+        placeholder="Tim kiem theo ten, theo ho so"
         />
       </div>
     </div>
-
+    
     <div class="m-row">
       <label for="">2.INPUT</label>
       <div class="m-row">
         <input
-          type="text"
-          class="m-input"
-          placeholder="Tim kiem theo ten, theo ho so"
+        type="text"
+        class="m-input"
+        placeholder="Tim kiem theo ten, theo ho so"
         />
       </div>
     </div>
@@ -85,9 +85,9 @@
         <div class="m-error-box" style="width: 260px">
           <div class="m-error">Mật khấu không đươc trùng với tài khoản</div>
           <input
-            type="text"
-            class="m-input-error m-input"
-            placeholder="Tim kiem theo ten, theo ho so"
+          type="text"
+          class="m-input-error m-input"
+          placeholder="Tim kiem theo ten, theo ho so"
           />
         </div>
       </div>
@@ -161,13 +161,17 @@
 
       <div class="m-row">
         <div class="m-combobox" style="width: 300px">
-          <input type="text" />
-          <button></button>
-          <div class="m-combobox-data" style="display: none">
+          <input id="inputCombobox" type="text" />
+          <button id="combobox-dropdown">
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-chevron-up" style="display: none;" ></i>
+          </button>
+          <div class="m-combobox-data" style="display: none;" >
             <div class="m-combobox-item">Trang thai 1</div>
             <div class="m-combobox-item">Trang thai 2</div>
             <div class="m-combobox-item">Trang thai 3</div>
             <div class="m-combobox-item m-combobox-itemselected">
+              <i class="fas fa-check"></i>
               Trang thai 4
             </div>
           </div>
@@ -192,7 +196,7 @@
                 với USB Token để ký nộp các hồ sơ
               </div>
             </div>
-
+            
             <div class="m-popup-button">
               <button class="m-button">Đồng ý</button>
               <button class="m-button m-button-error">Đóng</button>
@@ -202,7 +206,7 @@
       </div>
     </div>
     <!-- end dialog -->
-
+    
     <div class="m-row">
       <label for="">Toast messenger</label>
       <div class="m-row">
@@ -238,35 +242,7 @@
 
 
   </body>
-
-  <script>
-    const checkbox = document.querySelector(".m-checkbox");
-    const icon = document.querySelector(".fa-check");
-    checkbox.addEventListener("click", () => {
-      checkbox.classList.toggle("m-checkbox-selected");
-      if (icon.style.display === "none") {
-        icon.style.display = "block";
-      } else {
-        icon.style.display = "none";
-      }
-    });
-
-    document
-      .getElementById("btnShowDialog")
-      .addEventListener("click", function () {
-        document.querySelector(".m-dialog").style.display = "block";
-      });
-
-    document.getElementById("btnCloseDialog").addEventListener("click", () => {
-      document.querySelector(".m-dialog").style.display = "none";
-    });
-
-    document.getElementById("btnShowToast").addEventListener("click", () => {
-      console.log('hello')
-      document.getElementById("tsBox").style.display = "block";
-      setTimeout(() => {
-        document.getElementById("tsBox").style.display = "none";
-      }, 3000);
-    });
-  </script>
+  <script src="/js/jquery/jquery-3.6.0.min.js"></script>
+  
+  <script src="/js/combobox.js"></script>
 </html>

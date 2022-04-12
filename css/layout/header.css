@@ -12,12 +12,7 @@
   display: flex;
   align-items: center;
   padding-left: 16px;
-}
-
-.m-header .header-right {
-  width: calc(100% - 225px);
-  height: 100%;
-  /* background-color: red; */
+  border-bottom: 1px solid #bbb;
 }
 
 .m-header .header-left .sidebar {
@@ -40,6 +35,8 @@
 }
 
 .m-header .header-right {
+  width: calc(100% - 225px);
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;

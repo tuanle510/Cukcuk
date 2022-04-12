@@ -8,12 +8,17 @@
 }
 
 .m-combobox input {
-  width: 100%;
+  width: calc(100% - 40px);
   border-radius: 4px 0px 0px 4px;
   border: 1px solid #bbb;
   border-right: none;
-  outline: none;
   padding-left: 16px;
+}
+
+.m-combobox input:focus {
+  border: 1px solid #019160;
+  border-right: none;
+  outline: none;
 }
 
 .m-combobox input::placeholder {
@@ -24,12 +29,18 @@
 .m-combobox button {
   width: 40px;
   flex-shrink: 0;
-  background-image: url(/assets/icon/btn-prev-page.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  transform: rotate(-90deg);
   border: 1px solid #bbb;
-  border-radius: 0px 0px 4px 4px;
+  border-radius: 0px 4px 4px 0px;
+  background-color: #fff;
+}
+
+.m-combobox button.button-focus {
+  border: 1px solid #019160;
+  border-left: 1px solid #bbb;
+}
+
+.m-combobox button.button-active {
+  background-color: #e5e5e5;
 }
 
 .m-combobox .m-combobox-data {
@@ -37,7 +48,10 @@
   top: 100%;
   background-color: #fff;
   width: 100%;
-  box-shadow: 3px 5px 5px 3px rgb(0 0 0 / 11%);
+  box-shadow: 1px 5px 20px 1px rgb(0 0 0 / 11%);
+  padding: 4px 0;
+  border-radius: 4px;
+  z-index: 99;
 }
 
 .m-combobox .m-combobox-data .m-combobox-item {
@@ -54,8 +68,12 @@
 /* Chấm liền thì cùng cập */
 .m-combobox .m-combobox-data .m-combobox-item.m-combobox-itemselected {
   background-color: #019160;
-  background-image: url(/assets/icon/btn-next-page.svg);
-  background-repeat: no-repeat;
-  background-position: 10px center;
-  background-size: 16px 16px;
+  padding-left: 10px;
+  color: #fff;
+}
+
+.m-combobox .m-combobox-data .m-combobox-itemselected .fa-check {
+  font-size: 16px;
+  line-height: 16px;
+  margin-right: 10px;
 }

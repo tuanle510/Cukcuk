@@ -44,23 +44,33 @@
     <div class="m-navbar">
       <div class="m-nemu-item">
         <div class="m-menu-icon">
-          <i class="fas fa-users"></i>
+          <i class="fas fa-chart-pie"></i>
         </div>
-        <div class="m-menu-text">Danh sách nhân viên</div>
+        <div class="m-menu-text">Tông quan</div>
       </div>
-      <div class="m-nemu-item m-menu-selected">
-        <div class="m-menu-icon">
-          <i class="far fa-id-badge"></i>
-        </div>
-        <div class="m-menu-text">Danh sách khách hàng</div>
-      </div>
+
       <div class="m-nemu-item">
-        <div class="m-menu-icon"><i class="fas fa-chart-pie"></i></div>
+        <div class="m-menu-icon">
+          <i class="far fa-chart-bar"></i>
+        </div>
         <div class="m-menu-text">Báo cáo</div>
       </div>
       <div class="m-nemu-item">
+        <div class="m-menu-icon"><i class="fas fa-chart-pie"></i></div>
+        <div class="m-menu-text">Mua hàng</div>
+      </div>
+      <div class="m-nemu-item">
+        <div class="m-menu-icon"><i class="fas fa-users"></i></div>
+        <div class="m-menu-text">Danh mục nhân viên</div>
+      </div>
+      <div class="m-nemu-item m-menu-selected">
+        <div class="m-menu-icon"><i class="far fa-id-badge"></i></div>
+        <div class="m-menu-text">Danh sách khách hàng</div>
+      </div>
+
+      <div class="m-nemu-item">
         <div class="m-menu-icon"><i class="fas fa-cog"></i></div>
-        <div class="m-menu-text">Cài đặt</div>
+        <div class="m-menu-text">Thiết lập hệ thống</div>
       </div>
     </div>
 
@@ -97,7 +107,7 @@
                           >Mã nhân viên (<span>*</span>)</label
                         >
                         <input
-                          required
+                          id="employeeCodeInput"
                           type="text"
                           class="m-input"
                           placeholder="Tim kiem theo ten, theo ho so"
@@ -108,8 +118,6 @@
                           >Họ và tên (<span>*</span>)</label
                         >
                         <input
-                          required
-                          required
                           type="text"
                           class="m-input"
                           placeholder="Tim kiem theo ten, theo ho so"
@@ -120,7 +128,6 @@
                           >Ngày sinh (<span>*</span>)</label
                         >
                         <input
-                          required
                           type="date"
                           class="m-input"
                           placeholder="Tim kiem theo ten, theo ho so"
@@ -131,7 +138,6 @@
                           >Giới tính (<span>*</span>)</label
                         >
                         <input
-                          required
                           type="text"
                           class="m-input"
                           placeholder="Tim kiem theo ten, theo ho so"
@@ -193,19 +199,8 @@
                     <div class="content-fields">
                       <div class="field">
                         <label style="display: block" for="input"
-                          >Vị trí (<span>*</span>)</label
-                        >
-                        <input
-                          required
-                          type="text"
-                          class="m-input"
-                          placeholder="Tim kiem theo ten, theo ho so"
-                        />
-                      </div>
-                      <div class="field">
-                        <label style="display: block" for="input"
-                          >Phòng ban (<span>*</span>)</label
-                        >
+                          >Vị trí
+                        </label>
                         <input
                           type="text"
                           class="m-input"
@@ -214,8 +209,8 @@
                       </div>
                       <div class="field">
                         <label style="display: block" for="input"
-                          >mã số thuế cá nhân (<span>*</span>)</label
-                        >
+                          >Phòng ban
+                        </label>
                         <input
                           type="text"
                           class="m-input"
@@ -224,8 +219,8 @@
                       </div>
                       <div class="field">
                         <label style="display: block" for="input"
-                          >Mức lương cơ bản (<span>*</span>)</label
-                        >
+                          >Mã số thuế cá nhân
+                        </label>
                         <input
                           type="text"
                           class="m-input"
@@ -234,8 +229,8 @@
                       </div>
                       <div class="field">
                         <label style="display: block" for="input"
-                          >Ngày gia nhập công ty (<span>*</span>)</label
-                        >
+                          >Mức lương cơ bản
+                        </label>
                         <input
                           type="text"
                           class="m-input"
@@ -244,8 +239,18 @@
                       </div>
                       <div class="field">
                         <label style="display: block" for="input"
-                          >Tình trạng công việc (<span>*</span>)</label
-                        >
+                          >Ngày gia nhập công ty
+                        </label>
+                        <input
+                          type="text"
+                          class="m-input"
+                          placeholder="Tim kiem theo ten, theo ho so"
+                        />
+                      </div>
+                      <div class="field">
+                        <label style="display: block" for="input"
+                          >Tình trạng công việc
+                        </label>
                         <input
                           type="text"
                           class="m-input"
@@ -278,26 +283,34 @@
           />
 
           <div class="m-combobox" style="width: 300px">
-            <input type="text" placeholder="Tất cả phòng ban" />
-            <button></button>
+            <input id="inputCombobox" type="text" />
+            <button id="combobox-dropdown">
+              <i class="fas fa-chevron-down"></i>
+              <i class="fas fa-chevron-up" style="display: none"></i>
+            </button>
             <div class="m-combobox-data" style="display: none">
               <div class="m-combobox-item">Trang thai 1</div>
               <div class="m-combobox-item">Trang thai 2</div>
               <div class="m-combobox-item">Trang thai 3</div>
               <div class="m-combobox-item m-combobox-itemselected">
+                <i class="fas fa-check"></i>
                 Trang thai 4
               </div>
             </div>
           </div>
 
           <div class="m-combobox" style="width: 300px">
-            <input type="text" placeholder="Tất cả vị trí" />
-            <button></button>
+            <input id="inputCombobox" type="text" />
+            <button id="combobox-dropdown">
+              <i class="fas fa-chevron-down"></i>
+              <i class="fas fa-chevron-up" style="display: none"></i>
+            </button>
             <div class="m-combobox-data" style="display: none">
               <div class="m-combobox-item">Trang thai 1</div>
               <div class="m-combobox-item">Trang thai 2</div>
               <div class="m-combobox-item">Trang thai 3</div>
               <div class="m-combobox-item m-combobox-itemselected">
+                <i class="fas fa-check"></i>
                 Trang thai 4
               </div>
             </div>
@@ -310,13 +323,16 @@
 
       <div class="m-grip">
         <div class="m-contain-table">
-          <table class="m-table">
+          <table id="employeeTable" class="m-table">
             <thead>
               <tr>
+                <th class="text-alight-center">STT</th>
                 <th class="text-align-left" style="width: 100px">
                   Mã nhân viên
                 </th>
-                <th class="text-align-left">Họ và tên</th>
+                <th class="text-align-left" style="min-width: 160px">
+                  Họ và tên
+                </th>
                 <th class="text-align-left" style="width: 80px">Giới tính</th>
                 <th class="text-align-center" style="width: 150px">
                   Ngày sinh
@@ -333,24 +349,7 @@
                 </th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td class="text-align-left">NV0001</td>
-                <td class="text-align-left" style="text-overflow: ellipsis">
-                  Lê Thiện Tuấn
-                </td>
-                <td class="text-align-left">Nam</td>
-                <td class="text-align-center">05/10/2000</td>
-                <td class="text-align-left">0969095510</td>
-                <td class="text-align-left" style="text-overflow: ellipsis">
-                  lethientuan510@gmail.com
-                </td>
-                <td class="text-align-left">Fresher</td>
-                <td class="text-align-left">Viện đào tạo</td>
-                <td class="text-align-right"></td>
-                <td class="text-align-left">Đang thử việc</td>
-              </tr>
-            </tbody>
+            <tbody></tbody>
           </table>
         </div>
 
@@ -382,4 +381,5 @@
 
   <!-- nhúng js sử dụng chung cho các trang -->
   <script src="/js/employee.js"></script>
+  <script src="/js/combobox.js"></script>
 </html>

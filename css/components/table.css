@@ -37,7 +37,7 @@
 .m-grip .m-contain-table {
   width: 100%;
   height: calc(100% - 48px);
-  overflow-y: auto;
+  overflow: auto;
 }
 
 .m-grip .m-paging {
