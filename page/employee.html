@@ -46,7 +46,7 @@
         <div class="m-menu-icon">
           <i class="fas fa-chart-pie"></i>
         </div>
-        <div class="m-menu-text">Tông quan</div>
+        <div class="m-menu-text">Tổng quan</div>
       </div>
 
       <div class="m-nemu-item">
@@ -103,48 +103,47 @@
                     <div class="content-header">A.Thông tin chung:</div>
                     <div class="content-fields">
                       <div class="field">
-                        <label style="display: block" for="input"
-                          >Mã nhân viên (<span>*</span>)</label
-                        >
+                        <label for="input">Mã nhân viên (<span>*</span>)</label>
                         <input
-                          id="employeeCodeInput"
+                          required
+                          id="txtEmployeeCode"
                           type="text"
                           class="m-input"
                           placeholder="Tim kiem theo ten, theo ho so"
                         />
                       </div>
                       <div class="field">
-                        <label style="display: block" for="input"
-                          >Họ và tên (<span>*</span>)</label
-                        >
+                        <label for="input">Họ và tên (<span>*</span>)</label>
                         <input
+                          required
+                          id="txtEmployeeName"
                           type="text"
                           class="m-input"
                           placeholder="Tim kiem theo ten, theo ho so"
                         />
                       </div>
                       <div class="field">
-                        <label style="display: block" for="input"
-                          >Ngày sinh (<span>*</span>)</label
-                        >
+                        <label for="input">Ngày sinh (<span>*</span>)</label>
                         <input
+                          required
+                          id="txtEmployeeBirth"
                           type="date"
                           class="m-input"
                           placeholder="Tim kiem theo ten, theo ho so"
                         />
                       </div>
                       <div class="field">
-                        <label style="display: block" for="input"
-                          >Giới tính (<span>*</span>)</label
-                        >
+                        <label for="input">Giới tính (<span>*</span>)</label>
                         <input
+                          required
+                          id="txtEmployeeGender"
                           type="text"
                           class="m-input"
                           placeholder="Tim kiem theo ten, theo ho so"
                         />
                       </div>
                       <div class="field">
-                        <label style="display: block" for="input"
+                        <label for="input"
                           >Số CMTND/ Căn cước (<span>*</span>)</label
                         >
                         <input
@@ -155,15 +154,11 @@
                         />
                       </div>
                       <div class="field">
-                        <label style="display: block" for="input"
-                          >Ngày cấp (<span>*</span>)</label
-                        >
+                        <label for="input">Ngày cấp (<span>*</span>)</label>
                         <input required type="date" class="m-input" />
                       </div>
                       <div class="field" style="width: 50%">
-                        <label style="display: block" for="input"
-                          >Nơi cấp (<span>*</span>)</label
-                        >
+                        <label for="input">Nơi cấp (<span>*</span>)</label>
                         <input
                           required
                           type="text"
@@ -173,9 +168,7 @@
                       </div>
 
                       <div class="field">
-                        <label style="display: block" for="input"
-                          >Email (<span>*</span>)</label
-                        >
+                        <label for="input">Email (<span>*</span>)</label>
                         <input
                           required
                           type="text"
@@ -184,7 +177,7 @@
                         />
                       </div>
                       <div class="field">
-                        <label style="display: block" for="input"
+                        <label for="input"
                           >Số điện thoại (<span>*</span>)</label
                         >
                         <input
@@ -198,9 +191,7 @@
                     <div class="content-header">B.Thông tin công việc:</div>
                     <div class="content-fields">
                       <div class="field">
-                        <label style="display: block" for="input"
-                          >Vị trí
-                        </label>
+                        <label for="input">Vị trí </label>
                         <input
                           type="text"
                           class="m-input"
@@ -208,9 +199,7 @@
                         />
                       </div>
                       <div class="field">
-                        <label style="display: block" for="input"
-                          >Phòng ban
-                        </label>
+                        <label for="input">Phòng ban </label>
                         <input
                           type="text"
                           class="m-input"
@@ -218,9 +207,7 @@
                         />
                       </div>
                       <div class="field">
-                        <label style="display: block" for="input"
-                          >Mã số thuế cá nhân
-                        </label>
+                        <label for="input">Mã số thuế cá nhân </label>
                         <input
                           type="text"
                           class="m-input"
@@ -228,9 +215,7 @@
                         />
                       </div>
                       <div class="field">
-                        <label style="display: block" for="input"
-                          >Mức lương cơ bản
-                        </label>
+                        <label for="input">Mức lương cơ bản </label>
                         <input
                           type="text"
                           class="m-input"
@@ -238,9 +223,7 @@
                         />
                       </div>
                       <div class="field">
-                        <label style="display: block" for="input"
-                          >Ngày gia nhập công ty
-                        </label>
+                        <label for="input">Ngày gia nhập công ty </label>
                         <input
                           type="text"
                           class="m-input"
@@ -248,9 +231,7 @@
                         />
                       </div>
                       <div class="field">
-                        <label style="display: block" for="input"
-                          >Tình trạng công việc
-                        </label>
+                        <label for="input">Tình trạng công việc </label>
                         <input
                           type="text"
                           class="m-input"
@@ -323,7 +304,7 @@
 
       <div class="m-grip">
         <div class="m-contain-table">
-          <table id="employeeTable" class="m-table">
+          <table id="tblEmployeeList" class="m-table">
             <thead>
               <tr>
                 <th class="text-alight-center">STT</th>

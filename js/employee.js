@@ -3,7 +3,7 @@ $(document).ready(function () {
 });
 
 class EmployeePage {
-  TitlePage = "Danh sách nhân viên";
+  TitlePage = 'Danh sách nhân viên';
   constructor() {
     // load data
     this.loadData();
@@ -12,21 +12,18 @@ class EmployeePage {
   }
 
   initEvent() {
-    $("#btnShowForm").click(this.btnShowForm);
-    $(".btnCloseForm").click(this.btnCloseForm);
-    $(".sidebar").click(this.btnSideBar);
-    $("[required]").blur(this.validateRequired.bind(this));
-    // $(document).on("dblclick","#employeeTable tbody tr", this.showDataOnForm());
-  }
+    $('#btnShowForm').click(this.btnShowForm);
+    $('.btnCloseForm').click(this.btnCloseForm);
+    $('.sidebar').click(this.btnSideBar);
+    $('[required]').blur(this.validateRequired.bind(this));
 
-  /**
-   * Hiện data trong form dialog
-   * Created: LTTUAN(12/04/2022)
-   */
-  showDataOnForm() {
-    alert("hello");
+    // Gọi element kiểu này  Không cần đợi hiện thị mới gắn được sự kiện
+    $(document).on(
+      'dblclick',
+      'table#tblEmployeeList tbody tr',
+      this.showDataOnForm
+    );
   }
-
   /**
    * Thực hiện load dữ liệu
    * Created: LTTUAN (12/04/2022)
@@ -36,8 +33,8 @@ class EmployeePage {
       var data = null;
       // 1. Lấy dữ liệu từ Api được cung cấp
       $.ajax({
-        url: "http://amis.manhnv.net/api/v1/Employees", // Dia chi cua api
-        method: "GET",
+        url: 'http://amis.manhnv.net/api/v1/Employees', // Dia chi cua api
+        method: 'GET',
         // data: "data", // tham số đầu vào cho api nếu có
         // contentType: "application/json",
         // dataType: "json",
@@ -69,7 +66,7 @@ class EmployeePage {
         salary = this.formatCurrency(salary);
 
         // 3. building dữ liệu lên UI.
-        let trHTML = `
+        let trHTML = $(`
         <tr>
         <td class="text-alight-center">${count}</td>
           <td class="text-align-left">${employeeCode}</td>
@@ -87,9 +84,13 @@ class EmployeePage {
           <td class="text-align-right"> ${salary}</td>
           <td class="text-align-left">Đang thử việc</td>
         </tr>
-        `;
+        `);
 
-        $("#employeeTable tbody").append(trHTML);
+        // Lưu thông tin nhân viên vào data
+        $(trHTML).data('object', entity);
+
+        $('table#tblEmployeeList tbody').append(trHTML);
+        console.log(trHTML);
         count++;
       }
     } catch (error) {
@@ -97,14 +98,34 @@ class EmployeePage {
     }
   }
 
+  /**
+   * Hiện data trong form dialog
+   * Created: LTTUAN(12/04/2022)
+   */
+  showDataOnForm() {
+    // lấy dữ liệu từ các dòng tr
+    var employee = $(this).data();
+    console.log(employee.object);
+
+    // Đổ dữ liệu vào form
+    $('#txtEmployeeCode').val(employee.object.EmployeeCode);
+    $('#txtEmployeeName').val(employee.object.EmployeeName);
+    $('#txtEmployeeBirth').val(employee.object.DateOfBirth);
+    $('#txtEmployeeGender').val(employee.object.GenderName);
+
+    // Hiển thị form
+    $('#addStaff').show();
+    $('#txtEmployeeCode').focus();
+  }
+
   // format ngày tháng năm
   formatDate(date) {
     var date = new Date(date);
     // kiểm tra có phải date không
-    if (Object.prototype.toString.call(date) === "[object Date]") {
+    if (Object.prototype.toString.call(date) === '[object Date]') {
       // it is a date
       if (isNaN(date)) {
-        return "";
+        return '';
       } else {
         // lấy ra ngày
         let dd = date.getDate();
@@ -117,15 +138,15 @@ class EmployeePage {
         return `${dd}/${mm}/${yy}`;
       }
     } else {
-      console.log("lỗi");
+      console.log('lỗi');
     }
   }
 
   // format tiền lương
   formatCurrency(salary) {
-    salary = salary.toLocaleString("it-IT", {
-      style: "currency",
-      currency: "VND",
+    salary = salary.toLocaleString('it-IT', {
+      style: 'currency',
+      currency: 'VND',
     });
     return salary;
   }
@@ -135,40 +156,43 @@ class EmployeePage {
     // kiểm tra giá trị của input có hay không?
     var value = $(input).val();
     // Nếu không có thì hiện thị trạng thái lỗi
-    if (value == null || value == "") {
-      $(input).addClass("m-input-error");
-      $(input).attr("title", "Thông tin này không được để trống");
+    if (value == null || value == '') {
+      $(input).addClass('m-input-error');
+      $(input).attr('title', 'Thông tin này không được để trống');
     } else {
-      $(input).removeClass("m-input-error");
-      $(input).removeAttr("title");
+      $(input).removeClass('m-input-error');
+      $(input).removeAttr('title');
     }
   }
 
   /**
-   * Hiển thị form chi tiết
-   * CreatedBy: LTTuan (08.04.2022)
+   * Hiển thị / đóng form chi tiết
+   * CreatedBy: LTTuan (08/04/2022)
    *
    */
   btnShowForm() {
-    $("#addStaff").show();
-    $("#employeeCodeInput").focus();
+    $('#addStaff').show();
+    $('#txtEmployeeCode').focus();
   }
-
   btnCloseForm() {
-    $("#addStaff").hide();
-    $(".m-input").removeClass("m-input-error");
-    $(".m-input").removeAttr("title");
+    $('#addStaff').hide();
+    $('.m-input').removeClass('m-input-error');
+    $('.m-input').removeAttr('title');
   }
 
+  /**
+   * Đóng mở sidebar
+   * createdBy: LTTUAN (12/04/1022)
+   */
   btnSideBar() {
-    if ($(".m-menu-text").is(":hidden")) {
-      $(".m-navbar").css("width", "225px");
-      $(".m-content").css("left", "225px");
-      $(".m-menu-text").show();
+    if ($('.m-menu-text').is(':hidden')) {
+      $('.m-menu-text').show();
+      $('.m-navbar').css('width', '225px');
+      $('.m-content').css('left', '225px');
     } else {
-      $(".m-navbar").css("width", "53px");
-      $(".m-content").css("left", "53px");
-      $(".m-menu-text").hide();
+      $('.m-menu-text').hide();
+      $('.m-navbar').css('width', '53px');
+      $('.m-content').css('left', '53px');
     }
   }
 }
